@@ -12,7 +12,7 @@ This project demonstrates practical implementation of:
 - Server-side validation and exception handling
 - Dynamic template rendering
 - Responsive frontend design
-
+  
 ## Architecture
 
 - Framework: Django (Python)
