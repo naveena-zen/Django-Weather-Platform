@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6dd5ed, #2193b0);
+        }
+
+        .card {
+            background: #2f6f7e;
+            padding: 30px;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            width: 150px;
+        }
+
+        button {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: orange;
+            cursor: pointer;
+        }
+
+        .temp {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+
+        .desc {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        img {
+            width: 60px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Weather Dashboard</h1>
+
+        <form method="GET">
+            <input type="text" name="city" placeholder="Enter city">
+            <button type="submit">Search</button>
+        </form>
+
+        {% if weather %}
+            <div class="temp">
+                {{ weather.temperature }} °C
+            </div>
+
+            <img src="http://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="icon">
+
+            <div class="desc">
+                {{ weather.description }}
+            </div>
+        {% endif %}
+
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
