@@ -97,18 +97,24 @@ http://127.0.0.1:8000/
 ## Project Structure
 
 ```
-weather-dashboard/
+weather_platform/
 │
-├── weather_project/
+├── weather_platform/
 │   ├── settings.py
 │   ├── urls.py
+│   ├── wsgi.py
+│   ├── asgi.py
 │
 ├── dashboard/
-│   ├── templates/dashboard/home.html
+│   ├── migrations/
+│   ├── templates/dashboard/index.html
 │   ├── views.py
 │   ├── urls.py
 │
 ├── manage.py
+├── requirements.txt
+├── .gitignore
+└── README.md
 
 ```
 
