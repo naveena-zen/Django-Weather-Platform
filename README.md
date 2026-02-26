@@ -44,7 +44,7 @@ This project demonstrates practical implementation of:
 
 ### 1️⃣ Clone Repository
 ```
-git clone https://github.com/your-username/weather-dashboard.git
+git clone https://github.com/naveena-zen/weather-dashboard.git
 cd weather-dashboard
 ```
 
